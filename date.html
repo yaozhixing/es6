@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var str = "2019-2-28 10:20:30";		
+		//				1  2  5 20 50
+		
+		let d = new Date(str).getTime();
+		let getDate = (m,d,h,ms,s)=> {
+			var chaD = s*60 + ms*60*60 + h*60*60*60 + d*60*60*60*24 + m*60*60*60*24*30;
+			return chaD;
+		}
+		
+		let newStr = Number(getDate(1,2,5,20,50))+Number(d);
+		console.log(newStr)
+		let obj = new Date(newStr);
+		console.log(obj)
+	</script>
+</body>
+</html>
